@@ -44,18 +44,16 @@ function MovieRow({ title, url }) {
   return (
     <>
       <h1 className="font-nsans-bold md:text-xl p-4 capitalize">{title}</h1>
-      <div className="relative flex items-center overflow-hidden">
-        <div className="flex items-center space-x-4 p-4">
-          <div className="flex items-center space-x-4 overflow-x-auto scrollbar-hidden">
-            {movies.slice(shiftValue, shiftValue + 8).map((movie) => (
-              <MovieItem
-                key={movie.id}
-                movie={movie}
-                play={handlePlay}
-                liked={handleLikeMovies}
-              />
-            ))}
-          </div>
+      <div className="relative flex items-center overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-hidden">
+        <div className="flex items-center">
+          {movies.slice(shiftValue, shiftValue + 8).map((movie) => (
+            <MovieItem
+              key={movie.id}
+              movie={movie}
+              play={handlePlay}
+              liked={handleLikeMovies}
+            />
+          ))}
           <Slider shiftval={shiftValue} onShiftChange={setShiftValue} maxShift={movies.length - 5} step={1} />
         </div>
       </div>

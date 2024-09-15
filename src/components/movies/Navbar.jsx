@@ -90,7 +90,7 @@ function Navbar() {
               </li>
               <li className="py-2">
                 <Link to="/about" onClick={toggleMobileMenu}>
-                  TV Shows
+                  About Me
                 </Link>
               </li>
             </ul>

@@ -14,7 +14,6 @@ function TvRow({ title, url }) {
     setPlay(true);
     setplayTV(tv);
   };
-
   useEffect(() => {
     const params = {
       include_adult: false,
@@ -37,13 +36,11 @@ function TvRow({ title, url }) {
   return (
     <>
       <h1 className="font-nsans-bold md:text-xl p-4 capitalize">{title}</h1>
-      <div className="relative overflow-hidden">
-        <div className="flex items-center space-x-4 p-4">
-          <div className="flex items-center space-x-4 overflow-x-auto scrollbar-hidden">
-            {tvs.slice(shiftValue, shiftValue + 8).map((tv) => (
-              <TvItems key={tv.id} tv={tv} play={handlePlay} />
-            ))}
-          </div>
+      <div className="relative flex items-center overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-hidden">
+        <div className="w-full h-full">
+          {tvs.slice(shiftValue, shiftValue + 8).map((tv) => ( // Display only the relevant TV items based on shiftValue
+            <TvItems key={tv.id} tv={tv} play={handlePlay} />
+          ))}
           <Slider 
             shiftval={shiftValue} 
             onShiftChange={setShiftValue} 
