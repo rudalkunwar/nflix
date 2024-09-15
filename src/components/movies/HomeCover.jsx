@@ -26,7 +26,7 @@ function HomeCover({ movie }) {
             <div className="absolute inset-0 bg-gradient-to-r from-black opacity-70"></div>
             <img
               src={CreateImageUrl(movie.backdrop_path, "original")}
-              className="w-full h-[70vh] md:h-[90vh] object-cover "
+              className="w-full h-[50vh] lg:h-[90vh] object-cover "
               alt={movie.title}
             />
             <div className="absolute w-full bottom-0 md:bottom-[8%] p-4 md:p-8">
@@ -38,13 +38,13 @@ function HomeCover({ movie }) {
               <div className="mt-4 md:flex ">
                 <button
                   onClick={handlePlay}
-                  className="flex px-5 py-2 bg-gray-300 text-black mr-4 hover:bg-gray-700 hover:text-white transition duration-300"
+                  className="flex px-2 md:px-5 py-1 md:py-2 bg-gray-300 text-black mr-4 hover:bg-gray-700 hover:text-white transition duration-300"
                 >
-                  <FaPlay className="text-2xl mr-2" />
+                  <FaPlay className="text-xl md:text-2xl mr-2" />
                   <h3>Play</h3>
                 </button>
                 <button onClick={()=>toast.warn('Service not aviliable',{theme:"colored"})} className="flex my-2 sm:my-0 px-5 py-2 border-2 rounded-sm hover:bg-gray-400 hover:text-black transition duration-500 ease-in-out">
-                  <IoMdAdd className="text-sm sm:text-xl mr-2" />
+                  <IoMdAdd className="text-xl md:text-2xl mr-2" />
                   <h3>Watch Later</h3>
                 </button>
               </div>
