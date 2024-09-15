@@ -1,0 +1,16 @@
+/* Add these styles to your global CSS or a specific stylesheet */
+
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hidden {
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  /* Ensure that overflow-x-auto works */
+  .overflow-x-auto {
+    overflow-x: auto;
+  }
+  
