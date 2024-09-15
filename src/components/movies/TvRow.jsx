@@ -37,15 +37,15 @@ function TvRow({ title, url }) {
     <>
       <h1 className="font-nsans-bold md:text-xl p-4 capitalize">{title}</h1>
       <div className="relative flex items-center overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-hidden">
-        <div className="w-full h-full">
-          {tvs.slice(shiftValue, shiftValue + 8).map((tv) => ( // Display only the relevant TV items based on shiftValue
+        <div className="flex items-center">
+          {tvs.slice(shiftValue, shiftValue + 8).map((tv) => ( 
             <TvItems key={tv.id} tv={tv} play={handlePlay} />
           ))}
           <Slider 
             shiftval={shiftValue} 
             onShiftChange={setShiftValue} 
-            maxShift={tvs.length - 5} // Adjust maxShift based on the number of TV items
-            step={1} // Shift by one item at a time
+            maxShift={tvs.length - 5} 
+            step={1}
           />
         </div>
       </div>
