@@ -12,7 +12,7 @@ const About = () => {
           {/* Profile Image */}
           <div className="flex justify-center mb-10">
             <img
-              src="https://media.licdn.com/dms/image/v2/D5603AQGJHC2zONU11Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1726207086597?e=1732147200&v=beta&t=J7VLdqojC_IuQc8b1vbfVaGe4axflVeZrFFuaAWsWbg" 
+              src="/images/kuns.jpeg" 
               alt="Profile"
               className="rounded-full w-40 h-40 lg:w-48 lg:h-48 border-4 border-gray-700 shadow-lg transform hover:scale-105 transition-transform duration-300"
             />
