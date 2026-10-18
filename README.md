@@ -1,8 +1,48 @@
-# React + Vite
+# Nflix
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A movie browsing app running on live [TMDB](https://www.themoviedb.org/) data, with playback handled by `video.js` and HLS streaming.
 
-Currently, two official plugins are available:
+**Live:** https://nflix-rust.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What it does
+
+- Browse trending, popular and by-genre catalogues, pulled live from TMDB
+- Search films and series
+- Watch with HLS streaming through `video.js`, with quality selection
+- Detail pages with cast, crew and related titles
+
+## Stack
+
+| | |
+|---|---|
+| UI | React, Vite |
+| Data | TMDB API |
+| Playback | `video.js` with HLS |
+
+The Laravel side of this project — HLS delivery, subscriptions and eSewa payments — lives in [`nflix-laravel`](https://github.com/rudalkunwar/nflix-laravel).
+
+## Running locally
+
+```bash
+git clone https://github.com/rudalkunwar/nflix.git
+cd nflix
+npm install
+npm run dev
+```
+
+Copy `.env.example` to `.env` and add your TMDB API key:
+
+```bash
+VITE_TMDB_API_KEY=your_key_here
+```
+
+Get a key at https://www.themoviedb.org/settings/api.
+
+## Notes
+
+- TMDB requires attribution. This project is not affiliated with or endorsed by TMDB or Netflix.
+- Built as a full-stack exercise: front end in React, streaming and payment layer in Laravel.
+
+## License
+
+MIT
